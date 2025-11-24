@@ -220,46 +220,54 @@
             </section>
         </article>
     </main>
-    
+
     <footer>
         <section id="contact-us">
-            Contact Us <span id="required">(*required)</span>
+            <h3>Contact Us <span id="required">(*required)</span></h3>
             
+            <form action="#" method="post">
                 <div>
-                    <label>First Name<span>*</span></label>
-                    <input>
+                    <label for="first-name">First Name<span aria-hidden="true">*</span></label>
+                    <input id="first-name" name="first-name" type="text" required aria-required="true">
                 </div>
+                
                 <div>
-                    <label>Last Name<span>*</span></label>
-                    <input>
+                    <label for="last-name">Last Name<span aria-hidden="true">*</span></label>
+                    <input id="last-name" name="last-name" type="text" required aria-required="true">
                 </div>
+
                 <div>
-                    <label>Email<span>*</span></label>
-                    <input>
+                    <label for="email">Email<span aria-hidden="true">*</span></label>
+                    <input id="email" name="email" type="email" required aria-required="true">
                 </div>
+
                 <div>
-                    <label>Phone<span>*</span></label>
-                    <input>
+                    <label for="phone">Phone<span aria-hidden="true">*</span></label>
+                    <input id="phone" name="phone" type="tel" required aria-required="true">
                 </div>
+
                 <fieldset id="preferred-contact">
-                <legend>Preferred Contact Method<span>*</span></legend>
+                <legend>Preferred Contact Method<span aria-hidden="true">*</span></legend>
                     <div> 
-                        <input>
-                        <label>Email</label>
+                        <input id="contact-email" name="preferred-contact" type="radio" value="email" required aria-required="true">
+                        <label for="contact-email">Email</label>
                     </div>
+
                     <div>
-                        <input>
-                        <label>Text</label>
+                        <input id="contact-text" name="preferred-contact" type="radio" value="text">
+                        <label for="contact-text">Text</label>
                     </div>
+
                     <div>
-                        <input>
-                        <label>Phone</label>
+                        <input id="contact-phone" name="preferred-contact" type="radio" value="phone">
+                        <label for="contact-phone">Phone</label>
                     </div>
                 </fieldset>
+
                 <fieldset id="destination">
-                    <legend>Destination<span>*</span></legend>
-                    <select id="select-destination">
-                        <option>Choose</option>
+                    <legend>Destination<span aria-hidden="true">*</span></legend>
+                    <select id="select-destination" name="destination" required aria-required="true">
+                        <option value="">Choose</option>
                         <option>Barcelona</option>
                         <option>Granada</option>
                         <option>Ibiza</option>
@@ -271,10 +279,11 @@
                         <option>Other</option>
                     </select>
                 </fieldset>
+
                 <fieldset id="travelTime">
-                    <legend>Travel Time<span>*</span></legend>
-                    <select id="select-travel-time">
-                        <option>Choose</option>
+                    <legend>Travel Time<span aria-hidden="true">*</span></legend>
+                    <select id="select-travel-time" name="travel-time" required aria-required="true">
+                        <option value="">Choose</option>
                         <option>Fall</option>
                         <option>Winter</option>
                         <option>Spring</option>
@@ -282,11 +291,12 @@
                         <option>Flexible</option>
                     </select>
                 </fieldset>
-                <input>
-            
+                <input id="submit" type="submit" value="Submit">
+            </form>
         </section>
+
         <section id="legal">
-            Legal
+            <h2>Legal</h2>
             <small>Copyright 2021 Wonderlust</small>
             <a href="#">Privacy Statement</a>
             <a href="#">Terms of Service</a>
